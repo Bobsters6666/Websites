@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Tip Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body{
+    background-color: rgb(121, 113, 226)
+  }
+
+  .main{
+    font-weight: 500;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 40px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: rgb(36, 8, 63);
+    color: white;
+    padding-bottom: 700px;
+    padding-left: 25px;
+  }
+
+  .bill, .tip{
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .bill{
+    padding-top: 70px;
+  }
+
+  .people, .total-per-person{
+    display: inline-block;
+    padding-right: 15px;
+  }
+
+  .people-flex{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  .bill-textbox, .tip-textbox{
+    font-family: 'Dosis', sans-serif;
+    padding: 0 0 0 20px;
+    color: white;
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgb(60, 65, 104);
+    width: 87%;
+    height: 35px;
+  }
+
+  .bottom-flex{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .price-flex{
+    display: inline-block;
+    display: flex;
+    width: 26%;
+    justify-content: space-between;
+  }
+
+  .total-price{
+    padding-right: 30px;
+    font-size: 32px;
+  }
+
+  .quantity-text{
+    font-size: 26px;
+  }
+
+  .quantity-button{
+    color: white;
+    background-color: rgb(97, 98, 165);
+    border-radius: 100px;
+    border: 0px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .calculate-button{
+    margin-top: 30px;
+    background-color: rgb(97, 98, 165);
+    border: 0px;
+    border-radius: 15px;
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  }
+</style>
+
+</head>
+<body>
+  <main class="main">
+    <div class="bill">
+      Bill Total
+    </div>
+    <div>
+      <input id="bill" class="bill-textbox" type="text">
+    </div>
+    <div class="tip">
+      Tip
+    </div>
+    <div>
+      <input id="tip" class="tip-textbox" type="text">
+    </div>
+    <div class="people-flex">
+      <div class="people">
+        People
+      </div>
+      <div class="total-per-person">
+        Total per Person
+      </div>
+    </div>
+    <div class="bottom-flex">
+      <div class="price-flex">
+        <button onclick="add_one()" class="quantity-button">
+          +
+        </button>
+        <div id="quantity" class="quantity-text">
+          1
+        </div>
+        <button onclick="delete_one()" class="quantity-button">
+          -
+        </button>
+      </div>
+      <div id="total-price" class="total-price">
+        $100.00
+      </div>
+    </div>
+    <button onclick="calculate_tip()" class="calculate-button">
+      Calculate Tip
+    </button>
+  </main>
+</body>
+
+<script src="/javascript-practice/tip-calculator.js"></script>
+</html>
